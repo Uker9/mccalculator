@@ -34,38 +34,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Калькулятор размера пошлины в странах ЕС</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-    </style>
-</head>
-<html>
-<head>
-  <title>Калькулятор пошлины</title>
-</head>
-<body>
-  <form method="post">
-    <label for="cost">Введите стоимость товара в евро:</label>
-    <input type="text" id="cost" name="cost">
-
-    <label for="weight">Введите вес товара в кг:</label>
-    <input type="text" id="weight" name="weight">
-
-    <button type="submit">Рассчитать пошлину</button>
-  </form>
-
-  <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'): ?>
-    <p>Пошлина за товар составляет: <?php echo $duty ?> евро.</p>
-  <?php endif ?>
-</body>
-</html>
