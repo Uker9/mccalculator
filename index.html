@@ -1,4 +1,3 @@
-<form method="post" action="index.php">
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +12,8 @@
         }
     </style>
 </head>
-<html>
-<head>
-  <title>Калькулятор пошлины</title>
-</head>
 <body>
-  <form method="post">
+  <form>
     <label for="cost">Введите стоимость товара в евро:</label>
     <input type="text" id="cost" name="cost">
 
@@ -28,9 +23,8 @@
     <button type="submit">Рассчитать пошлину</button>
   </form>
 
-  <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'): ?>
-    <p>Пошлина за товар составляет: <?php echo $duty ?> евро.</p>
-  <?php endif ?>
+  <p id="result"></p>
+
+  <script src="index.js"></script>
 </body>
 </html>
-</form>
